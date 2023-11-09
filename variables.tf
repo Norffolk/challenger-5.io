@@ -1,30 +1,29 @@
 # variables.tf
 
-# below we define with the variable instance_count how many servers we want to create
+# com a variável instance_count nós definimos quantas instâncias vão ser criadas
 variable "instance_count" {
   default = "3"
 }
 
-# below we define the default server names
+# nessa variável definimos o nome das VMs
 variable "instance_tags" {
   type    = list(string)
   default = ["server01", "server02", "server03",]
 }
 
-# we use Ubuntu as the OS
+# Aqui definimos a imagem da AWS que vamos utilizar, nesse caso é a do ubuntu
 variable "ami" {
   type    = string
   default = "ami-0fc5d935ebf8bc3bc"
 }
 
+# Aqui o tipo da instância, de acordo com a AWS; t2.micro significa que não haverá custos de criação para esse tipo de instância
 variable "instance_type" {
   type    = string
   default = "t2.micro"
 }
 
-
-# output.tf
-
+# output.tf vai nos retornar esses valores na tela após a criação
 output "server-data" {
   value = [for vm in aws_instance.server[*] : {
     ip_address = vm.public_ip
