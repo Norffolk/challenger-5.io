@@ -1,4 +1,4 @@
-# Infraestrutura como código utilizando AWS + Terraform + Ansible
+# Infraestrutura como código utilizando Terraform + AWS + Ansible
 ## 1. Configurando o AWS CLI
 ``Primeiro, é necessário configurar o AWS CLI, para que sua máquina se conecte com a AWS. para isso, é preciso utilizar o comando aws configure (lembre-se de já ter o AWS CLI instalado, caso ainda não tenha, utilize o site oficial da AWS: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).``
 
