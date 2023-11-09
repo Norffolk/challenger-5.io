@@ -23,4 +23,4 @@
           - curl
           - htop
     - name: Run Grafana installation script
-      script: /home/jcz/ubuntu_jammy/grafana.sh
+      script: /home/myhome/ubuntu_jammy/grafana.sh
