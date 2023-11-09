@@ -1,0 +1,26 @@
+---
+- name: test
+  hosts: all
+  gather_facts: true
+  become: true
+  handlers:
+    - name: restart_sshd
+      service:
+        name: sshd
+        state: restarted
+  tasks:
+    - name: atualizar o cache de pacotes
+      apt:
+        update_cache: yes
+    - name: install
+      package:
+        state: latest
+        name:
+          - bash-completion
+          - vim
+          - nano
+          - nginx
+          - curl
+          - htop
+    - name: Run Grafana installation script
+      script: /home/jcz/ubuntu_jammy/grafana.sh
