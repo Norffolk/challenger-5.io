@@ -1,5 +1,5 @@
 # Infraestrutura como código utilizando AWS + Terraform + Ansible
-## 1. Configurar o AWS CLI:
+## 1. Configurando o AWS CLI
 ``Primeiro, é necessário configurar o AWS CLI, para que sua máquina se conecte com a AWS. para isso, é preciso utilizar o comando aws configure (lembre-se de já ter o AWS CLI instalado, caso ainda não tenha, utilize o site oficial da AWS: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).``
 
 **Após a instalação, utilize o comando:**
@@ -31,7 +31,7 @@ ssh-keygen -b 2048 -t rsa -f ansible-ssh-key
 ``
 
 **Copie o conteúdo da chave pública, e deixe-a salva em algum bloco de notas.**
-## 3. Criando a infraestrutura:
+## 3. Criando a infraestrutura
 **Após todo o processo de configuração da AWS e criação de Key Pairs, o próximo passo é criar um diretório e dois arquivos dentro, main.tf e variables.tf:**
 ```
 mkdir terraform-iac && cd terraform-iac && touch main.tf variables.tf 
